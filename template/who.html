@@ -1,0 +1,20 @@
+{% extends 'base/master.html'  %}
+{% block 'title' %}Who{% endblock  %}
+{% block 'body' %}
+ <div class="container">
+   <div class="col-md-6 col-md-offset-3">
+    <div class="box">
+      <h3>Who are you?</h3>
+      <hr/>
+     <div classs="whobo" style="margin-left:20%;">
+        <a href="{% url 'create' %}" class=" btn btn-primary">I am Jobseeker</a>
+        <a href="{% url 'companycreate' %}" class=" btn btn-primary">I am Company</a>
+     </div>
+
+    </div>
+
+
+
+   </div>
+ </div>
+{% endblock %}

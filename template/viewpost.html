@@ -1,0 +1,31 @@
+{% extends 'base/master.html'  %}
+{% block 'title' %}Who{% endblock  %}
+{% block 'body' %}
+ <div class="container">
+  <div class="box">
+      <h1>All vacancy</h1>
+      <table class="table">
+          <th>
+              <h3>Title</h3>
+          </th>
+
+
+          <th>
+              <h3>Action</h3>
+          </th>
+
+          {% for j in job %}
+          <tr>
+              <td><a href="{% url 'viewdetail' j.id %}">{{j.title}}</a></td>
+
+
+              <td><a href="{% url 'deletepost' j.id %}" ><i class="fa fa-trash"></i></a> | <a href="{% url 'updatepost' j.id %}"><i class="fa fa-pencil"></i></a></td>
+
+          </tr>
+          {% endfor %}
+      </table>
+  </div>
+     <br>
+     <a href="{% url 'companydashboard' %}" class="btn btn-success">Back to Dashboard</a>
+ </div>
+{% endblock %}

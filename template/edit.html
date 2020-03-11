@@ -1,0 +1,12 @@
+{% extends 'base/master.html'  %}
+{% block 'title' %}Who{% endblock  %}
+{% block 'body' %}
+ <div class="container">
+    Edit
+     <form method="post">
+         {{form}}
+         {% csrf_token %}
+         <button type="submit" class="btn btn-primary">Save</button>
+     </form>
+ </div>
+{% endblock %}
